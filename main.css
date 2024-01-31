@@ -1,30 +1,46 @@
 body,
 html {
-  /* height:100%; */
+  max-height:100%;
+  max-width:100%;
+  overflow-x:hidden;
   
-  #contianer{
-  display: grid;
-  gap: 5px;
-  height: 100vh;
-  width: 100vw;
-
-  grid-template-columns: 100px;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
-    "name link"
-    "main"
-    "footer";
-  }
+  
+  #container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto 1fr auto;
+  
+    height: 100vh;
+  
+    grid-template-areas: 
+      "name link"
+      "main main"
+      "footer footer";
+    }
 
 
   #container{
-  display: grid;
-  gap: 5px;
-  grid-template-columns: repeat(4,1fr);
+  display: flex;
+  flex-wrap:wrap;
+  grid-template-columns: repeat(4,1fr); 
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: "item";
   grid-area: main;
+  
   }
 
+  main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5px;
+}
+
+header{
+  grid-area: header;
+  background-color: purple;
+
+}
+/*
 h1{
   background-color: red;
   grid-area: name;
@@ -34,17 +50,32 @@ ul{
   background-color: goldenrod;
   grid-area: link;
 }
-
+*/
 .store-item{
-background-color:blue;
-grid-area: item;
+ border-style: solid;
 }
 
-.img{
-  width: 50;
-  height: 50;
-  object-fit: cover;
+.store-item img { 
+  height: auto; 
+  max-width: 300px; 
+  display: block;
+  margin: 0 auto;
   grid-area: item;
+  border-bottom-style: solid;
+  border-spacing: 5px;
+  padding: 3px;
+ 
+}
+
+span{
+  padding: 20px;
+  font-size: 20px;
+}
+
+footer{
+  grid-area: footer;
+  background-color: grey;
+  font-size: 20px;
 }
 
 margin: 0px;
