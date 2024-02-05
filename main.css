@@ -71,10 +71,20 @@ ul {
   font-weight: bold;
 }
 
-.store-item{
- border-style: solid;
- height: 430px;
- width: 460px;
+.store-item {
+  position: relative; 
+  border: 2px solid; 
+  padding: 16px; 
+  height: 430px; 
+  width: 430px;
+}
+
+.item-info {
+  position: absolute; 
+  bottom: 16px; 
+  left: 0; 
+  right: 0;
+  text-align: center; 
 }
 
 .store-item img { 
