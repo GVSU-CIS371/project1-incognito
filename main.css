@@ -58,6 +58,7 @@ ul {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
+  font-weight: bold;
 }
 
 .store-item{
@@ -87,7 +88,9 @@ span{
   font-size: 20px;
 }
 
-
+.store-item img:span{
+  align-items: flex-end;
+}
 
 footer{
   grid-area: footer;
